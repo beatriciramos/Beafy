@@ -4,7 +4,9 @@ import { Container, Label } from './styles';
 
 export default function Card({ data }) {
     const [{ isDragging }, drag] = useDrag({
-        type: "CARD",
+        item: {
+            type: "CARD",
+        },
         collect: (monitor) => ({
             isDragging: monitor.isDragging(),
         }),
