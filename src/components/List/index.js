@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdAdd } from 'react-icons/md';
 import { Container } from './styles';
+
 import Card from '../Card'
 
 export default function List({ data }) {
@@ -16,7 +17,7 @@ export default function List({ data }) {
             </header>
 
             <ul>
-                {data.cards.map(card => <Card key={card.id} data={card} />)}
+                {data.cards.map((card, index) => <Card index={index} key={card.id} data={card} />)}
             </ul>
         </Container>
     )
